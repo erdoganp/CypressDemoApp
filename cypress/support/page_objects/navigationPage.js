@@ -63,6 +63,11 @@ export class NavigationPage{
         selectGroupMenuItem('Modal & Overlays')
         cy.contains('Window').click()
     }
+
+    popOverPage(){
+        selectGroupMenuItem('Modal & Overlays')
+        cy.contains('Popover').click()
+    }
 }
 
 /**

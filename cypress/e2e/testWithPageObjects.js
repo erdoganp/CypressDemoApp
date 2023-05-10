@@ -19,6 +19,7 @@ describe('Test with Page Objects', ()=>{
         navigateTo.toesterPage()
         navigateTo.dialogPage()
         navigateTo.windowPage()
+        navigateTo.popOverPage()
     })
 
 
