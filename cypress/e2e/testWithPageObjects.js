@@ -1,4 +1,7 @@
+const { onDatePickerPage } = require("../support/page_objects/datepickerPage")
+const { onFormLayoutsPage } = require("../support/page_objects/formLayoutsPage")
 const { onNavigationPage, navigateTo } = require("../support/page_objects/navigationPage")
+const { onSmartTablePage } = require("../support/page_objects/smartTablePage")
 
 
 /**
@@ -24,5 +27,19 @@ describe('Test with Page Objects', ()=>{
 
 
 
+    it.only( 'shoould submit inline and Basic form and select tomorrrow data in the calender',()=>{
+
+       // navigateTo.formLayoutsPage()
+       //onFormLayoutsPage.submitInlineFormWithNameAndEmail('Erdogan', 'epacaci@ku.edu.tr')//element i bulmada sorun yasıyor sonra bakılacak
+       // onFormLayoutsPage.submitBasicFormWithEmailAndPassword('epacaci@ku.edu.tr','123')
+        navigateTo.datepickerPage()
+        onDatePickerPage.selectCommonDatepickerDateFromToday(1)
+        onDatePickerPage.selectDatepickerWithRangeFromToday(7,14)
+        navigateTo.smartTablePage()
+        onSmartTablePage.addNewRecordWithFirstAndLastName("Erdogan","PACACI")
+        onSmartTablePage.updateAgeByFirstName("Erdogan","35")
+        onSmartTablePage.deleteRowByIndex(1)
+
+    })
     
 })
