@@ -10,7 +10,7 @@ const { onSmartTablePage } = require("../support/page_objects/smartTablePage")
  */
 describe('Test with Page Objects', ()=>{
     beforeEach('open Application', ()=>{
-        cy.visit('/')
+        cy.openHomePage()
     })
 
 
