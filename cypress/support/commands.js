@@ -35,8 +35,12 @@
 //     }
 //   }
 // }
-
-Cypress.Commands.add('openHomePage',() =>{
+/**
+ * 
+ * openHomePage adında bir method urettikk ve bu method diger sayfalarda cagırılıp vist de istenilen yere gidiyor.
+ * https://docs.cypress.io/api/cypress-api/custom-commands
+ */
+Cypress.Commands.add('openHomePage',() =>{  
 
     cy.visit("/")
 })
